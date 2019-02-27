@@ -13,7 +13,7 @@ class PostsList extends Component {
     if (this.props.posts.loading) return <Loader />;
 
     return (
-      <div className="ui cards" style={{ justifyContent: "center" }}>
+      <div className="ui cards" style={{ justifyContent: "space-between" }}>
         {this.props.posts.data.map(post => (
           <PostListItem key={post.id} post={post} />
         ))}

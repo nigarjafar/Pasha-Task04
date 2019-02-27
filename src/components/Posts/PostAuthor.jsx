@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../../actions";
+import { Link } from "react-router-dom";
 
 class PostAuthor extends Component {
   render() {
@@ -8,11 +9,14 @@ class PostAuthor extends Component {
       return null;
     }
 
+    const { id, name } = this.props.user;
     return (
-      <h1 className="ui label">
-        <i className="user icon" />
-        {this.props.user.name}
-      </h1>
+      <Link to={`/users/${id}`}>
+        <h1 className="ui label">
+          <i className="user icon" />
+          {name}
+        </h1>
+      </Link>
     );
   }
 }
