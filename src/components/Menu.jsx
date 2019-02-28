@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default () => {
   return (
-    <div className="ui inverted menu fixed">
-      <div className="ui container">
-        <Link to="/" className="active item">
+    <div className="ui inverted segment">
+      <div className="ui inverted secondary pointing menu">
+        <NavLink to="/" exact activeClassName="active" className="item">
           Home
-        </Link>
-        <Link to="/posts/new" className="active item">
-          Create
-        </Link>
+        </NavLink>
+        <NavLink to="/posts/new" activeClassName="active" className="item">
+          Add Post
+        </NavLink>
       </div>
     </div>
   );
